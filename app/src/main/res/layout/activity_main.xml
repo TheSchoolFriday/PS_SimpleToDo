@@ -12,14 +12,20 @@
         android:layout_height="200sp"
         app:srcCompat="@drawable/rp" />
 
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/wheelContents"/>
+
     <EditText
         android:id="@+id/editTextInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_marginVertical="10sp"
-        android:hint="Add to-do List"
-        android:inputType="textPersonName" />
+        android:hint="@string/type_in_a_new_task_here"
+        android:inputType="text" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,9 +37,19 @@
             style="@android:style/Widget.Holo.Button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="20sp"
+            android:layout_marginRight="10sp"
             android:layout_weight="1"
             android:text="@string/add"
+            app:backgroundTint="#070707" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            style="@android:style/Widget.Holo.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10sp"
+            android:layout_weight="1"
+            android:text="@string/delete"
             app:backgroundTint="#070707" />
 
         <Button
